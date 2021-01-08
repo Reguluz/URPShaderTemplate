@@ -169,8 +169,8 @@ public class URPShaderCreator
                   "            };\n\n";
       template += "            struct v2f\n" + 
                   "            {\n" + 
-                  "               float2 uv : TEXCOORD0;\n" + 
                   "               float4 vertex : SV_POSITION;\n" + 
+                  "               float2 uv : TEXCOORD0;\n" + 
                   "            };\n\n";
       template += "            Texture2D _MainTex;\n" +
                   "            SamplerState sampler_MainTex;\n" +
