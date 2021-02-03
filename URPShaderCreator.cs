@@ -114,7 +114,7 @@ public class URPShaderCreator
       }
       
       StreamWriter sw = null;
-      FileInfo t = new FileInfo ( path+ "//" + "URPUnlit"+".hlsl");
+      FileInfo t = new FileInfo ( path+ "//" + "URPUnlit"+".shader");
       if (!t.Exists) {
          sw = t.CreateText ();
       } else
@@ -183,7 +183,7 @@ public class URPShaderCreator
                   "                return o;\n" + 
                   "            }\n\n";
       template += "            half4 frag (v2f i) : SV_Target\n" +
-                  "            {" +
+                  "            {\n" +
                   "                half4 col = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);\n" +
                   "                return col;\n" +
                   "            }\n" +
